@@ -23,7 +23,7 @@ public class Main {
 	}
 	
 	public static String TCPEnginePost() {
-		String payLoad ="<ipayMsg client=\"PDSLCOOP\" term=\"00800\" seqNum=\"35\" time=\"2020-01-21 10:30:46 +0300\">\r\n" + 
+		String payLoad ="<ipayMsg client=\"PDSLTEST\" term=\"00800\" seqNum=\"35\" time=\"2020-01-21 10:30:46 +0300\">\r\n" + 
 				"	<billPayMsg ver=\"1.7\">\r\n" + 
 				"		<payReq>\r\n" + 
 				"			<ref>5043160846632020</ref>\r\n" + 
@@ -45,7 +45,7 @@ public class Main {
 		Socket socket = null;
 		
 		try {
-			socket = new Socket("41.204.194.188", 8902);
+			socket = new Socket("40.204.194.188", 8902);
         	socket.setSoTimeout(30000);
         	if(socket.isConnected()== true){
         		System.out.println("Connected !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
@@ -73,7 +73,7 @@ public class Main {
 		return "";
 	}
 	public static String TCPEngineGet() {
-		String payLoad = "<ipayMsg client=\"PDSLCOOP\" term=\"00800\" seqNum=\"22\" time=\"2020-01-20 13:04:39 +0300\">\r\n" + 
+		String payLoad = "<ipayMsg client=\"PDSLTEST\" term=\"00800\" seqNum=\"22\" time=\"2020-01-20 13:04:39 +0300\">\r\n" + 
 				"<billPayMsg ver=\"1.7\">\r\n" + 
 				"<billInfoReq>\r\n" + 
 				"<ref>50431604399488206</ref>\r\n" + 
@@ -87,7 +87,7 @@ public class Main {
 		
 		try {
 			
-			socket = new Socket("41.204.194.188", 8902);
+			socket = new Socket("40.204.194.188", 8902);
         	socket.setSoTimeout(30000);
         	if(socket.isConnected()== true){
         		System.out.println("Connected !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
